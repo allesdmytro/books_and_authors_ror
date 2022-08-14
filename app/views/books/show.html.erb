@@ -1,0 +1,15 @@
+<h1><%= @book.title %></h1>
+<p> <%= @book.genre %> </p>
+<p><%= @book.description %></p>
+
+<%= link_to 'Edit', edit_book_path(@book), class: 'MButton button is-warning' %>
+<br>
+<%= link_to 'Delete', 
+    book_path(@book), 
+    data: {
+      turbo_method: :delete,
+      turbo_confirm: "Are you sure?"
+    },
+    class: 'MButton button is-danger' %>
+<br>
+<%= link_to 'back to main page', root_path %>

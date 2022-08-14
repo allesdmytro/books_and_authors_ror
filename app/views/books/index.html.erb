@@ -1,0 +1,15 @@
+<%= link_to "Add a new book", new_book_path, class: 'button is-success' %>
+<h1>Books</h1>
+<ul>
+  <% @books.each do |book| %>
+    <li>
+      <h3><%= book.title %></h3> 
+      <br>
+      <%= book.genre %>
+      <br>
+      <%= book.description %> 
+      <br>
+      <%= link_to "view more", book, class: 'button is-info' %>
+    </li>
+  <% end %>
+</ul>
